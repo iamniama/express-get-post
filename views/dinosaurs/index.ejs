@@ -1,5 +1,12 @@
+
 <ul>
     <% myDinos.forEach(function(dino) { %>
-    <li><%= dino.name %> is a <%= dino.type %></li>
+    <li class="card-text"><%= dino.name %> is a <%= dino.type %></li>
     <% }); %>
   </ul>
+
+  <form method="GET" action="/dinosaurs">
+    <label for="nameFilter" class="card-text">Filter by Name</label>
+    <input id="nameFilter" type="text" name="nameFilter" class="form-control">
+    <input type="submit" class="btn btn-primary">
+  </form>
