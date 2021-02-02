@@ -3,12 +3,12 @@ const express = require('express')
 app = express()
 const expressLayouts = require('express-ejs-layouts')
 app.set('view engine', 'ejs')
-app.use(expressLayouts)
-app.use(express.urlencoded({extended: false}));
+
 
 
 //middleware
-
+app.use(expressLayouts)
+app.use(express.urlencoded({extended: false}));
 
 app.get("/dinosaurs", function(req, res){
     let dinos = JSON.parse(fs.readFileSync('./dinosaurs.json'))
